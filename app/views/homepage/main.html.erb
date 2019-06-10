@@ -27,8 +27,6 @@
 	<script src="/assets/jquery.rd-navbar.js" type="text/javascript" defer="defer"></script>
 
 
-
-
 	<body class="body__home option-com_content view-featured task- itemid-101">
 
 		<!-- Body -->
@@ -85,12 +83,30 @@
 														</li>
 													</ul>
 												</li>
+												
+												<li id="iceMenu_142" class="iceMenuLiLevel_1 ">
+													
+															<% if signed_in? %>
+															Ви авторизовані як: <%= current_user.email %>
+															<%= button_to 'Вийти', sign_out_path, method: :delete, :class => 'iceMenuTitle' %>
+														<% else %>
+															<%= link_to 'Авторизуватися', sign_in_path,:class => 'iceMenuTitle'  %>
+														<% end %>
+												</li>
+												<li id="iceMenu_142" class="iceMenuLiLevel_1 ">
+													
+
+
+													<div id="flash" ґ>
+													<% flash.each do |key, value| %>
+														<div class="flash <%= key %>"><%= value %></div>
+													<% end %>
+													</div>
+												</li>
 											</ul>
 										</div>
 									</div>
 								</nav>
-
-
 
 								<div class="moduletable  ">
 									<div class="module_container">
