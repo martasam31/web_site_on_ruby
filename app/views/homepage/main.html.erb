@@ -87,7 +87,7 @@
 												<li id="iceMenu_142" class="iceMenuLiLevel_1 ">
 													
 															<% if signed_in? %>
-															Ви авторизовані як: <%= current_user.email %>
+															<a class="iceMenuTitle"> Ви авторизовані як: <%= current_user.email %> </a>
 															<%= button_to 'Вийти', sign_out_path, method: :delete, :class => 'iceMenuTitle' %>
 														<% else %>
 															<%= link_to 'Авторизуватися', sign_in_path,:class => 'iceMenuTitle'  %>
