@@ -9,7 +9,7 @@
 	<title>IFNTUOG dance studio / Школа танцю &quot;ІФНТУНГ денс&quot; Львів</title>
 	<link href="/assets/template.css" rel="stylesheet" type="text/css" />
 	<link href="/assets/komento.css" rel="stylesheet" type="text/css" />
-	<link href="/assets/color_scheme_1.css" rel="stylesheet" type="text/css" id="color_scheme"/>
+	<link href="/assets/color_scheme_1.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	<link href="/assets/contactus_lightbox.css" rel="stylesheet" type="text/css" />
 	<link href="/assets/template.css?d651c56c340d18e33bab10adfd186d23" rel="stylesheet" type="text/css" />
 	<link href="/assets/navbar.css" rel="stylesheet" type="text/css" />
@@ -45,18 +45,18 @@
 									<div class="module_container">
 										<div class="icemegamenu">
 											<ul id="icemegamenu">
-												<li id="iceMenu_101" class="iceMenuLiLevel_1 current active fullwidth">
-													<a href="http://localhost:3000/" class="icemega_active iceMenuTitle ">
+												<li id="iceMenu_101" class="iceMenuLiLevel_1">
+													<a href="http://localhost:3000/" class="iceMenuTitle ">
 														<span class="icemega_title icemega_nosubtitle">Викладачі</span>
 													</a>
-												</li>	
+												</li>
 												<li id="iceMenu_623" class="iceMenuLiLevel_1 ">
 													<a href="/zali" class=" iceMenuTitle ">
 														<span class="icemega_title icemega_nosubtitle">Зали</span>
 													</a>
 												</li>
-												<li id="iceMenu_285" class="iceMenuLiLevel_1 mzr-drop parent ">
-													<a href="/rozklad" class=" iceMenuTitle ">
+												<li id="iceMenu_285" class="iceMenuLiLevel_1  current active fullwidth mzr-drop parent ">
+													<a href="/rozklad" class="icemega_active iceMenuTitle ">
 														<span class="icemega_title icemega_nosubtitle">Розклад</span>
 													</a>
 													<ul class="icesubMenu icemodules sub_level_1" style="width:280px">
@@ -83,30 +83,40 @@
 														</li>
 													</ul>
 												</li>
-												
+
 												<li id="iceMenu_142" class="iceMenuLiLevel_1 ">
-													
-															<% if signed_in? %>
-															<a class="iceMenuTitle"> Ви авторизовані як: <%= current_user.email %> </a>
-															<%= button_to 'Вийти', sign_out_path, method: :delete, :class => 'iceMenuTitle' %>
-														<% else %>
-															<%= link_to 'Авторизуватися', sign_in_path,:class => 'iceMenuTitle'  %>
-														<% end %>
+
+													<% if signed_in? %>
+														<a class="iceMenuTitle"> Ви авторизовані як:
+															<%= current_user.email %>
+														</a>
+														<%= button_to 'Вийти', sign_out_path, method: :delete, :class => 'iceMenuTitle' %>
+															<% else %>
+																<%= link_to 'Авторизуватися', sign_in_path,:class => 'iceMenuTitle'  %>
+																	<% end %>
 												</li>
 												<li id="iceMenu_142" class="iceMenuLiLevel_1 ">
-													
+
 
 
 													<div id="flash" ґ>
-													<% flash.each do |key, value| %>
-														<div class="flash <%= key %>"><%= value %></div>
-													<% end %>
+														<% flash.each do |key, value| %>
+															<div class="flash <%= key %>">
+																<%= value %>
+															</div>
+															<% end %>
 													</div>
 												</li>
 											</ul>
 										</div>
 									</div>
 								</nav>
+
+
+
+
+
+
 
 								<div class="moduletable  ">
 									<div class="module_container">
@@ -160,7 +170,7 @@
 
 				</div>
 
-				
+
 				<!-- mainbottom -->
 				<div id="mainbottom" class="stuck_position">
 					<div class="container">
@@ -170,109 +180,65 @@
 									<header class='page_header'>
 										<h1 class="moduleTitle ">
 											<span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Наші</span>
-											<span class="item_title_part_1 item_title_part_even item_title_part_first_half">прекрасні</span>
-											<span class="item_title_part_3 item_title_part_even item_title_part_second_half item_title_part_last">викладачі</span>
+											<span class="item_title_part_1 item_title_part_even item_title_part_first_half">сучасні</span>
+											<span class="item_title_part_3 item_title_part_even item_title_part_second_half item_title_part_last">зали</span>
 										</h1>
 									</header>
-									<div class="mod-newsflash-adv mod-newsflash-adv__people_say cols-2" id="module_222">
-										<div class="row">
-											<article class="col-sm-6 item item_num0 item__module  " id="item_105">
-
-												<div class="item_content">
-													<!-- Intro Image -->
-													<figure class="item_img img-intro img-intro__left">
-														<img src="/assets/migel.jpg" alt="">
-													</figure>
-													<!-- Item title -->
-													<!-- Introtext -->
-													<div class="item_introtext">
-														<blockquote>
-															<cite>Мігель Галина</cite>
-															<p>Випускниця 4 сезону Myway Dance Academy.&nbsp;</p>
-														</blockquote>
-													</div>
-
-
-													<!-- Read More link -->
-												</div>
-												<div class="clearfix"></div>
-											</article>
-											<article class="col-sm-6 item item_num1 item__module  " id="item_104">
-
-												<div class="item_content">
-													<!-- Intro Image -->
-													<figure class="item_img img-intro img-intro__left">
-														<img src="/assets/guarana.jpg" alt="">
-													</figure>
-													<!-- Item title -->
-													<!-- Introtext -->
-													<div class="item_introtext">
-														<blockquote>
-															<cite>Гуарана Анна</cite>
-															<p>Педагог Myway Dance Academy.
-															Хореограф-постановник на телепроектах: "Маша і моделі" (ТЕТ), "Навчи мене танцювати" ( "Сіті").</p>
-														</blockquote>
-													</div>
-
-
-													<!-- Read More link -->
-												</div>
-												<div class="clearfix"></div>
-											</article>
-										</div>
-										<div class="row">
-											<article class="col-sm-6 item item_num2 item__module  " id="item_103">
-
-												<div class="item_content">
-													<!-- Intro Image -->
-													<figure class="item_img img-intro img-intro__left">
-														<img src="/assets/koval.jpg" alt="">
-													</figure>
-													<!-- Item title -->
-													<!-- Introtext -->
-													<div class="item_introtext">
-														<blockquote>
-															<cite>Коваль Константин</cite>
-															<p>Учасник 20-ки кращих танцюристів на телешоу "Танцюють Всі-3".
-
-															Хореограф-постановник безлічі кліпів та перфомансів, хореограф шоу "Танці з зірками".&nbsp</p>
-														</blockquote>
-													</div>
-
-
-													<!-- Read More link -->
-												</div>
-												<div class="clearfix"></div>
-											</article>
-											<article class="col-sm-6 item item_num3 item__module  " id="item_50">
-
-												<div class="item_content">
-													<!-- Intro Image -->
-													<figure class="item_img img-intro img-intro__left">
-														<img src="/assets/posnanska.jpg" alt="">
-													</figure>
-													<!-- Item title -->
-													<!-- Introtext -->
-													<div class="item_introtext">
-														<blockquote>
-															<cite>Познанська Яна</cite>
-															<p>Працює в напрямку: contemporaryСтудентка КНУКіМ, спеціальність "Сучасно-класична хореографія" .</p>
-														</blockquote>
-													</div>
-
-
-													<!-- Read More link -->
-												</div>
-												<div class="clearfix"></div>
-											</article>
-										</div>
-
-									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
+
+				<article class="page-item page-item__">
+					<header class="item_header">
+						<h2 class="item_title">
+							<span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Зал</span>
+							<span class="item_title_part_1 item_title_part_even item_title_part_first_half">на</span>
+							<span class="item_title_part_2 item_title_part_odd item_title_part_first_half">вул.</span>
+							<span class="item_title_part_3 item_title_part_even item_title_part_second_half">Мисливська,</span>
+							<span class="item_title_part_4 item_title_part_odd item_title_part_second_half item_title_part_last">29</span>
+						</h2>
+					</header>
+
+					<img src="/assets/mislivska.jpg" alt="">
+
+				</article>
+				<article class="page-item page-item__">
+					<header class="item_header">
+						<h2 class="item_title">
+							<span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Зал</span>
+							<span class="item_title_part_1 item_title_part_even item_title_part_first_half">на</span>
+							<span class="item_title_part_2 item_title_part_odd item_title_part_first_half">Володимира</span>
+							<span class="item_title_part_3 item_title_part_even item_title_part_second_half">Великого</span>
+							<span class="item_title_part_4 item_title_part_odd item_title_part_second_half item_title_part_last">2</span>
+						</h2>
+					</header>
+
+
+					<img src="/assets/v_velikogo.jpg" alt="">
+
+				</article>
+
+				<article class="page-item page-item__">
+					<header class="item_header">
+						<h2 class="item_title">
+							<span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Зал</span>
+							<span class="item_title_part_1 item_title_part_even item_title_part_first_half">на</span>
+							<span class="item_title_part_2 item_title_part_odd item_title_part_second_half">Лісна</span>
+							<span class="item_title_part_3 item_title_part_even item_title_part_second_half item_title_part_last">50А</span>
+						</h2>
+					</header>
+					<div class="item_fulltext"></div>
+
+
+					<img src="/assets/lisna.jpg" alt="">
+				</article>
+
+
+
+
 			</div>
 		</div>
 		<div id="footer-wrapper">
